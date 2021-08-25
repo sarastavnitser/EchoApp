@@ -7,8 +7,9 @@
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior">
-    <com.google.android.material.appbar.AppBarLayout
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    >
+   <!-- <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.EchoApp.AppBarOverlay">
@@ -21,7 +22,7 @@
             app:popupTheme="@style/Theme.EchoApp.PopupOverlay"
             />
 
-    </com.google.android.material.appbar.AppBarLayout>
+    </com.google.android.material.appbar.AppBarLayout>-->
 
     <include layout="@layout/main_include_content_entering_item" />
 
