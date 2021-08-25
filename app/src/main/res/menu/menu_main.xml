@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.echoapp.MainActivity">
+
+    <item
+        android:id="@+id/action_display_prior_entries"
+        android:checkable="true"
+        android:checked="true"
+        android:title="@string/display_prior_entries"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_clear_prior_entries"
+        android:icon="@drawable/ic_action_x"
+        android:title="@string/clear_prior_entries"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/about"
+        app:showAsAction="never"
+
+        />
+
+</menu>

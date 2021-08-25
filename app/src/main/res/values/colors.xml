@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <color name="primaryColor">#673ab7</color>
+    <color name="primaryLightColor">#9a67ea</color>
+    <color name="primaryDarkColor">#320b86</color>
+    <color name="secondaryColor">#9b27af</color>
+    <color name="secondaryLightColor">#cf5ce2</color>
+    <color name="secondaryDarkColor">#69007f</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <!-- For colored text; default is black/dark-gray (Day) or white/light-gray (Night) -->
+    <color name="primaryTextColoredColor">@color/primaryDarkColor</color>
+    <color name="secondaryTextColoredColor">@color/primaryColor</color>
+    <!-- Matching colored background -->
+    <color name="backgroundColoredColor">@color/defaultBackgroundColor</color>
+
+
+    <color name="defaultBackgroundColor">@android:color/background_light</color>
+
+
+
+</resources>
