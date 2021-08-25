@@ -12,6 +12,7 @@ import com.example.echoapp.databinding.ActivityMainBinding;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.ui.AppBarConfiguration;
+
 import lib.Utils;
 import model.UserEntryList;
 
@@ -20,8 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;
     private final UserEntryList mUserEntriesList = new UserEntryList();
     private boolean mShowHistory = true;
-
-
 
 
     @Override
@@ -36,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
         //setting the list view  and text views
 //        ListView entries = (ListView) findViewById(R.id.entries);
         TextView about = findViewById(R.id.about_message);
-         EditText enteredMessage = findViewById(R.id.entered_message);
+        EditText enteredMessage = findViewById(R.id.entered_message);
 
-         TextView entries = findViewById(R.id.entries);
+        TextView entries = findViewById(R.id.entries);
         //creating a list adapter
 //        ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
 //                android.R.layout.simple_list_item_1, mUserEntriesList.getUserEntriesListAsList());
@@ -50,7 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 about.setText((enteredMessage.getText().toString()));
                 mUserEntriesList.addEntryToList((enteredMessage.getText().toString()));
 //                entries.setAdapter(adapter);
-                entries.setText(mUserEntriesList.getUserEntriesListAsString());
+                if (mShowHistory) {
+                    entries.setText(mUserEntriesList.getUserEntriesListAsString());
+                }
             }
         });
     }
@@ -75,15 +76,16 @@ public class MainActivity extends AppCompatActivity {
             TextView entries = findViewById(R.id.entries);
             toggleMenuItem(item);
             mShowHistory = item.isChecked();
-            if(mShowHistory){
+            if (mShowHistory) {
                 entries.setText(mUserEntriesList.getUserEntriesListAsString());
-            }else{
+            } else {
                 entries.setText("");
             }
 
         } else if (id == R.id.action_clear_prior_entries) {
             TextView entries = findViewById(R.id.entries);
             mUserEntriesList.clearUserEntries();
+
             entries.setText(mUserEntriesList.getUserEntriesListAsString());
 
         } else if (id == R.id.action_about) {
@@ -98,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         menu.findItem(R.id.action_display_prior_entries).setChecked(mShowHistory);
         return super.onPrepareOptionsMenu(menu);
     }
-
 
 
     @Override

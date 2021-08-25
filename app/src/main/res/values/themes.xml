@@ -28,5 +28,7 @@
 
     <style name="Theme.EchoApp.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-
+    <style name="Theme.EchoApp.NoActionBar.SplashScreenTheme">
+        <item name="android:background">@mipmap/ic_launcher_foreground</item>
+    </style>
 </resources>
